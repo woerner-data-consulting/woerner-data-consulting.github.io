@@ -1,9 +1,15 @@
+/* Grundlegende Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   color: #222;
   background: #f9f9f9;
+  height: 100%; /* Damit der Body die volle Höhe des Bildschirms hat */
+}
+
+html, body {
+  height: 100%; /* Beide müssen die volle Höhe ausfüllen */
 }
 
 header {
@@ -37,10 +43,13 @@ header h1 {
   background: #ddd;
 }
 
+/* Hauptbereich */
 main {
   max-width: 800px;
   margin: 2rem auto;
   padding: 0 1rem;
+  min-height: calc(100vh - 100px); /* Der Hauptbereich nimmt den Rest des Bildschirms ein, minus der Höhe des Footers */
+  padding-bottom: 100px; /* Platz für den Footer schaffen */
 }
 
 section {
@@ -51,9 +60,29 @@ h2 {
   color: #2a2f4f;
 }
 
+/* Footer fixieren */
 footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #eee;
   text-align: center;
   padding: 1rem;
-  background: #eee;
   font-size: 0.9rem;
+}
+
+.construction {
+  text-align: center;
+  padding: 2rem;
+}
+
+.construction h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.construction p {
+  font-size: 1.2rem;
+  color: #555;
 }
